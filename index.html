@@ -15,8 +15,21 @@
 
     .wrapper {
       position: relative;
-      width: 100%;
-      max-width: 60%;
+  width: 100%;        /* ✅ 모바일 기본: 화면 꽉 */
+  margin: auto;
+}
+
+/* ✅ PC에서는 화면 60%만 차지 */
+@media (min-width: 900px) {
+  .wrapper {
+    width: 60%;
+  }
+}
+
+.wrapper img {
+  width: 100%;
+  display: block;
+}
     }
 
     /* ✅ PNG 원본 이미지 */
