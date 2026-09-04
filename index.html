@@ -3,23 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>카지노 토참시</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
     body {
       margin: 0;
+      padding: 0;
       background: #000;
+    }
+
+    body {
       display: flex;
       justify-content: center;
     }
 
+    /* 전체 랜딩페이지 */
     .wrapper {
       position: relative;
       width: 100%;
-      margin: auto;
+      max-width: 891px;
+      margin: 0 auto;
     }
 
-    /* PC 크기 */
+    /* PC에서는 너무 크게 퍼지지 않게 */
     @media (min-width: 900px) {
       .wrapper {
         width: 45%;
@@ -27,38 +39,50 @@
       }
     }
 
-    /* 이미지 */
+    /* 랜딩 이미지 */
     .wrapper img {
+      display: block;
       width: 100%;
       height: auto;
-      display: block;
     }
 
-    /* 클릭 영역 */
+    /* 공통 클릭 영역 */
     .click-zone {
       position: absolute;
-      left: 3%;
-      width: 94%;
-      height: 12%;
+
+      left: 2.8%;
+      width: 94.4%;
+
+      display: block;
       cursor: pointer;
       z-index: 10;
+
+      /* 테스트할 때만 아래 주석 해제 */
+      /* background: rgba(255, 0, 0, 0.2); */
     }
 
-    /* 각각 위치 */
+    /* 1. 생방송 보러가기 */
     .zone1 {
-      top: 42%;
+      top: 41.25%;
+      height: 13.3%;
     }
 
+    /* 2. 카카오톡 문의 */
     .zone2 {
-      top: 57.5%;
+      top: 55.45%;
+      height: 13.3%;
     }
 
+    /* 3. 텔레그램 문의 */
     .zone3 {
-      top: 72%;
+      top: 69.55%;
+      height: 13.3%;
     }
 
+    /* 4. 토참시 가족방 */
     .zone4 {
-      top: 86%;
+      top: 83.75%;
+      height: 13.3%;
     }
   </style>
 </head>
@@ -67,34 +91,46 @@
 
   <div class="wrapper">
 
-    <img src="landing.png.png" alt="랜딩 이미지" />
+    <!-- 랜딩 이미지 -->
+    <img
+      src="landing.png"
+      alt="카지노 토참시 랜딩페이지"
+    />
 
-    <!-- 1. 유튜브 -->
-    <a class="click-zone zone1"
-       href="https://xn--vv4b54ovoe.com"
-       target="_blank"
-       rel="noopener noreferrer">
+    <!-- 1. 생방송 -->
+    <a
+      class="click-zone zone1"
+      href="https://xn--vv4b54ovoe.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="생방송 보러가기">
     </a>
 
-    <!-- 2. 카카오톡 -->
-    <a class="click-zone zone2"
-       href="https://open.kakao.com/o/sZPGH9Dg"
-       target="_blank"
-       rel="noopener noreferrer">
+    <!-- 2. 카카오톡 문의 -->
+    <a
+      class="click-zone zone2"
+      href="https://open.kakao.com/o/sZPGH9Dg"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="카카오톡 문의">
     </a>
 
-    <!-- 3. 텔레그램 -->
-    <a class="click-zone zone3"
-       href="https://telegram.me/storyinquiry"
-       target="_blank"
-       rel="noopener noreferrer">
+    <!-- 3. 텔레그램 문의 -->
+    <a
+      class="click-zone zone3"
+      href="https://telegram.me/storyinquiry"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="텔레그램 문의">
     </a>
 
     <!-- 4. 토참시 가족방 -->
-    <a class="click-zone zone4"
-       href="https://open.kakao.com/o/gTZm5cli"
-       target="_blank"
-       rel="noopener noreferrer">
+    <a
+      class="click-zone zone4"
+      href="https://open.kakao.com/o/gTZm5cli"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="토참시 가족방">
     </a>
 
   </div>
